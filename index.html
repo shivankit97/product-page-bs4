@@ -12,35 +12,41 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Scroll effect -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+      
     <title>ChiHuaHua</title>
   </head>
 
-  <body>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top">
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">       <!--Data spy-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
+                <div class="container-fluid">
                 <a class="navbar-brand" href="#">ChiHuaHua</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto smooth-scroll">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Variants</a>
+                            <a class="nav-link" href="#specifications">Specifications</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#connect">Connect</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Support</a>
+                            <a class="nav-link" href="#support">Support</a>
                         </li> 
                     </ul>
                 </div>
+                </div>
             </nav>
             <!--Slide Show-->
-        <div class="container">
-            <div id="slide" class="carousel slide padding" data-ride="carousel">
+        <div class="container-fluid">
+            <div id="slide" class="carousel slide " data-ride="carousel">
 
                 <!-- Indicators -->
                 <ul class="carousel-indicators">
@@ -55,7 +61,7 @@
                     <img src="img/Chihuahua2.jpg" alt="chihuahua photo">
                     <div class="carousel-caption">
                         <h3 class="display-4">Live the life of Chihuahua</h3>
-                        <button class="btn btn-outline-light btn-lg" type="button"><a href="#">Let's Go</a></button>
+                        <button class="btn btn-outline-light btn-lg" type="button"><a href="#about">Let's Go</a></button>
                     </div>
                     </div>
                     <div class="carousel-item">
@@ -67,24 +73,30 @@
             </div>
         </div>  
         <!--row-->  
-        <div class="container">
+        <section id="about">    
+        <div class="container-fluid padding" id="about">
         <div class="row">
             <div class="col-md-8 col-sm-12">
+                <div class="about-left">
                 <h1 class="display-4">About</h1>
                 <p class="lead">
                         The Chihuahua dog breed‘s charms include his small size, outsize personality, and variety in coat types and colors. 
                         He’s all dog, fully capable of competing in dog sports such as agility and obedience, and is among the top 10 watchdogs recommended by experts.
                          He loves nothing more than being with his people and requires a minimum of grooming and exercise
                 </p>
+                </div>
             </div>
             <div class="col-md-4 col-sm-12">
-                <img class="rounded" src="img/Chihuahua4.jpg">
+                <div class="about-right">
+                <img class="rounded animate slideInRight" src="img/Chihuahua4.jpg">
+                </div>
             </div>
         </div>
         </div>
-
+        </section>
             <!--Jumbotron-->
-            <div class="jumbotron mt-4">
+            <div class="jumbotron mt-4" id="specifications">
+              <div class="specs">
                 <h1 class="display-4">Specifications</h1>
                 <p class="lead">
                         Weight Range:
@@ -117,11 +129,13 @@
                             <li>Tendency to Dig: Low Social/Attention Needs: High</li>
                         </ul>
                 </p>
+      
+              </div>
             </div> 
             
-            <div class="row text-center">
-                <div class="col-12">
-                    <h1 class="display-4">Support</h1>
+            <div class="row text-center bigpadding" id="connect">
+                <div class="col-12 connect">
+                    <h1 class="display-4">Connect</h1>
                 </div>
                 <div class="col-12 social">
                     <a href="#"><i class="fab fa-facebook"></i></a>
@@ -133,8 +147,8 @@
             </div>
 
             <!--footer-->
-            <footer>
-                <div class="container">
+            <footer id="support">
+                <div class="container-fluid">
                     <div  class="row text-center">
                         <div class="col-md-4 col-sm-12">
                             <h5>Contact</h5>
@@ -163,8 +177,65 @@
             </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.navbar',{
+            duration: 2000,
+            origin: 'top'
+        });
+        sr.reveal('.carousel-caption',{
+            duration: 2000,
+            origin: 'bottom'
+        });
+        sr.reveal('.about-left',{
+            duration: 2000,
+            origin: 'top',
+            easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+            viewFactor: 0.2
+        });
+        sr.reveal('.about-right',{
+            duration: 2000,
+            origin: 'right',
+            delay: 1000,
+            viewFactor: 0.2,
+            distance: '300px'
+        });
+        sr.reveal('.specs',{
+            duration: 2000,
+            origin: 'left',
+            viewFactor: 0.2,
+            distance: '200px'
+        });
+        sr.reveal('.connect',{
+            duration: 2000,
+            viewFactor: 0.2,
+            origin: 'top'
+        });
+        sr.reveal('.social a', { duration: 2000 }, 200);
+    </script>
+    <script>
+    $(function() {
+      // Smooth Scrolling
+      $('a[href*="#"]:not([href="#"])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: target.offset().top
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
+    </script>
   </body>
 </html>
